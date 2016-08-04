@@ -13,7 +13,7 @@ function currentLine(array) {
       for (var i = 0; i < array.length; i++) {
         result[i] = (array.indexOf(array[i])+1) + ". " + array[i];
       }
-      return `The line is currently: ${result.join()}.`;
+      return `The line is currently: ${result.join(", ")}`;
   }
 }
 
