@@ -4,6 +4,10 @@ function takeANumber(curLine, newGuest){
     return `Welcome, ${newGuest}. You are number ${temp} in line.`;
 }
 
-function nowServing(){
-  var str = "The line is empty"
+function nowServing(curLine){
+  var str = "There is nobody waiting to be served!"
+  if(curLine.length <= 0){
+    return str
+  }
+
 }
