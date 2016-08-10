@@ -18,18 +18,19 @@ function nowServing(curLine){
 
 function currentLine(curLine){
   var str = "The line is currently:";
-  var i = 0;
+  var i = 1;
   if(curLine.length > 0){
-    curLine.foreach(person =>  {
-      if(i === curLine.length - 1){
+    curLine.forEach(person => {
+      if(i === curLine.length){
         str += ` ${i}. ${person}`;
       }
       else{
           str += ` ${i}. ${person},`;
       }
       ++i;
-      return str;
+      return undefined
     })
+    return str
   }
   else{
     return "The line is currently empty.";
