@@ -26,6 +26,7 @@ function currentLine(curLine){
 
     }
     str += "."
+    return str
   }
   else{
     return "The line is currently empty."
