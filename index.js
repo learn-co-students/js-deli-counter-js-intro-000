@@ -1,4 +1,5 @@
 function takeANumber(curLine, newGuest){
-    var temp = curLine.lenght;
-    return `You are ${temp + 1} in line. `;
+    curLine.push(newGuest)
+    var temp = curLine.length;
+    return `Welcome, ${newGuest}. You are number ${temp} in line.`;
 }
