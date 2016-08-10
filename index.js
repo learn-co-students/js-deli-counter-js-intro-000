@@ -23,13 +23,11 @@ function currentLine(curLine){
     curLine.foreach(person =>  {
       str += ` ${i}. ${person}`;
       ++i;
-
     }
-    str += "."
-    return str
+    str += ".";
+    return str;
   }
   else{
-    return "The line is currently empty."
+    return "The line is currently empty.";
   }
-
 }
