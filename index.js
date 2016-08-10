@@ -20,7 +20,7 @@ function currentLine(curLine){
   if(curLine.length > 0){
     var str = "The line is currently:";
     var i = 0;
-    curLine.foreach(person => () {
+    curLine.foreach(person) => () {
       if(i === curLine.length - 1){
         str += ` ${i}. ${person}`;
       }
