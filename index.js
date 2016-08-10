@@ -21,11 +21,14 @@ function currentLine(curLine){
     var str = "The line is currently:";
     var i = 0;
     curLine.foreach(person =>  {
-      if(i === curLine.length - 1){}
-      str += ` ${i}. ${person},`;
+      if(i === curLine.length - 1){
+        str += ` ${i}. ${person}`;
+      }
+      else{
+          str += ` ${i}. ${person},`;
+      }
       ++i;
     }
-    str += ".";
     return str;
   }
   else{
