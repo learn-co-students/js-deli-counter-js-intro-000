@@ -16,4 +16,15 @@ function nowServing(curLine){
 
 }
 
-function currentLine(curLine){}
+function currentLine(curLine){
+  if(curLine.length > 0){
+    var str = ""
+    curLine.foreach(person =>  {
+
+    }
+  }
+  else{
+    return "The line is currently empty."
+  }
+
+}
