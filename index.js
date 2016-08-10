@@ -12,6 +12,8 @@ function nowServing(curLine){
   }
   var strNext = curLine[0]
   curLine.shift()
-  return `Currently serving ${strNext}`
+  return `Currently serving ${strNext}.`
 
 }
+
+function currentLine(curLine){}
