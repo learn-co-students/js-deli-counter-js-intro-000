@@ -18,10 +18,10 @@ function nowServing(curLine){
 
 function currentLine(curLine){
   if(curLine.length > 0){
-    var str = "The line is currently: "
-    var i = 0
+    var str = "The line is currently: ";
+    var i = 0;
     curLine.foreach(person =>  {
-      str += `${i}. ${person} `
+      str += `${i}. ${person} `;
       ++i;
 
     }
