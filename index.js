@@ -30,8 +30,8 @@ function currentLine(curLine){
       }
       ++i;
       return str;
-  })
-}
+    })
+  } 
   else{
     return "The line is currently empty.";
   }
