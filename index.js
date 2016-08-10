@@ -17,10 +17,9 @@ function nowServing(curLine){
 }
 
 function currentLine(curLine){
+  var str = "The line is currently:";
+  var i = 0;
   if(curLine.length > 0){
-    var str = "The line is currently:";
-    var i = 0;
-
     curLine.foreach(person =>  {
       if(i === curLine.length - 1){
         str += ` ${i}. ${person}`;
