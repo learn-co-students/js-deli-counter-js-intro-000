@@ -25,10 +25,15 @@ function currentLine(katzDeliLine){
     var count = katzDeliLine.length;
     var i=0;
     do{
-      string.push(`${i+1}. ${katzDeliLine[i]}`);
+      if (i===0){
+          string.push(`${i+1}. ${katzDeliLine[i]}`);
+      }
+      else{
+        string.push(` ${i+1}. ${katzDeliLine[i]}`);
+      }
       i++;
     }while(i<count);
     return `The line is currently: ${string}`;
   }
-  
+
 };
