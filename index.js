@@ -6,13 +6,11 @@ function takeANumber(katzDeliLine, newCustomer){
 };
 
 function nowServing(katzDeliLine){
-  if (katzDeliLine.count < 1){
+  if (katzDeliLine.length < 1){
       return "There is nobody waiting to be served!";
   }
   else{
     var curName = katzDeliLine.shift();
     return `Currently serving ${curName}.`;
   }
-
-
 };
