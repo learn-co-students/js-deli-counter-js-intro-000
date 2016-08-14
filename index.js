@@ -28,7 +28,7 @@ function currentLine(katzDeliLine){
       string.push(`${i+1}. ${katzDeliLine[i]}`);
       i++;
     }while(i<count);
-    return `The line is currently:${string}`;
+    return `The line is currently: ${string}`;
   }
-
+  
 };
