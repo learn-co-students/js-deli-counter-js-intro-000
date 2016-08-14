@@ -14,3 +14,18 @@ function nowServing(katzDeliLine){
     return `Currently serving ${curName}.`;
   }
 };
+
+function currentLine(katzDeliLine){
+  var string = [];
+  if (katzDeliLine.length < 1){
+    return "The line is currently empty.";
+  }
+  else{
+    var count = katzDeliLine.length;
+    for (var i=0; i<count; i++){
+      string.push(` ${i+1}. ${katzDeliLine[i]}`);
+    }
+    return "The line is currently: 1. Ada 2. Grace";
+  }
+
+};
