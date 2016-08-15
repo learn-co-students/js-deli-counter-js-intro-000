@@ -13,3 +13,16 @@ function nowServing(katzDeliLine){
     return `Currently serving ${katzDeliLine.shift()}.`;
   }
 }
+
+function currentLine(katzDeliLine){
+  if(katzDeliLine == 0){
+    return "The line is currently empty.";
+  }
+  else{
+    var numberedLine = [];
+    for(let i = 0; i < katzDeliLine.length; i++){
+      numberedLine.push((i+1) + ". " + katzDeliLine[i]);
+    }
+    return "The line is currently: " + numberedLine.join(", ");
+  }
+}
