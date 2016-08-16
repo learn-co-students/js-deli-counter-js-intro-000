@@ -1,13 +1,13 @@
 function takeANumber (line, name) {
   // body...
   line.push(name)
-  return "Welcome, " + name + ". You are numer " + line.length + "line."; 
+  return "Welcome, " + name + ". You are number " + line.length + " in line."; 
 }
 
 function nowServing (line) {
   // body...
   if (line.length <= 0) {
-    return "Theres nobody waiting to be served!";
+    return "There is nobody waiting to be served!";
   }
   else {
     return "Currently serving " + line.shift() + ".";
@@ -23,9 +23,9 @@ function currentLine (line) {
     var placeHolder = [];
     line.forEach(function (name, index) {
       // body...
-      num = index ++;
-      placeHolder.push(` ${num + 2}. ${name}`)
+       var num = index ++;
+      placeHolder.push(` ${num + 1}. ${name}`)
     });
-    return "Line is currently:" + placeHolder;
+    return "The line is currently:" + placeHolder;
   }
 }
