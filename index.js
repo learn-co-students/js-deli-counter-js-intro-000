@@ -4,9 +4,9 @@ var katzDeli = [];
 ReferenceError: takeANumber is not defined -->*/
 
 function takeANumber(katzDeliLine, personName) {
-   katzDeliLine.push(personName);
+   katzDeliLine.push(personName); // Adds person to the line.
 return `Welcome, ${personName}. You are number ${katzDeliLine.length} in line.`;
-}
+} // Returns greeting, and position of person in line.
 
 // ----------------------------------------
 /* deli nowServing returns the line is empty when no on is on line:
@@ -16,11 +16,11 @@ ReferenceError: nowServing is not defined -->*/
 shifts the line: ReferenceError: nowServing is not defined  -->*/
 
 function nowServing(katzDeliLine) {
-  if (katzDeliLine.length === 0) {
+  if (katzDeliLine.length === 0) { // <-- Checking to see if someone is in line.
     return "There is nobody waiting to be served!";
   }
 
-  else {
+  else { // <-- Taking next person in line.
     return `Currently serving ${katzDeliLine.shift()}.`;
   }
 }
@@ -37,13 +37,18 @@ line: ReferenceError: currentLine is not defined -->*/
 /* deli currentLine(line) says who is in line when there are people waiting:
 ReferenceError: currentLine is not defined -->*/
 
-function currentLine() {
-  if (katzDeliLine >= 1) {
-    return `The line is currently: ${katzDeliLine}`;
-  }
-
-  else {
+function currentLine(line) {
+  if (line.length === 0) { // <-- Checking to see if someone is in line.
     return "The line is currently empty.";
   }
 
+  else { // <-- States the person's position, and name in line.
+    // return `The line is currently: ${line}`:
+    var output = "The line is currently: ";
+    line.forEach(function(person, index){
+      output += index + person
+      return output;
+    });
+  }
+// return output;
 }
