@@ -61,10 +61,3 @@ return newArray;
 // "The line is currently: 1. Bill, 2. Jane, 3. Ann";
 // This is static because I don't know how to make it dynamic.
 //`The line is currently: ${line}`;
-/* else statement for currentLine function.
-var output = "The line is currently: ";
-line.forEach(function(person, index){
-  output += index + person
-  return output;
-});
-*/
