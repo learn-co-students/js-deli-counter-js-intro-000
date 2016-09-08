@@ -23,10 +23,20 @@ else {
 
 // currentLine()  returns `"The line is currently: 1. Ada 2. Grace"`.  If nobody in line, return `"The line is currently empty."`
 
-function currentLine(deliLine, customer) {
+function currentLine(deliLine) {
   if (deliLine.length === 0) {
    return `The line is currently empty.`
 }
+else {
+      var CustomerPlaceInLine = [];
+      deliLine.forEach(function(customer, index){ // this will allow us to access the person and index out of the deliLine
+        CustomerPlaceInLine.push((index + 1).toString() + ". " + customer);
+      });
+      var lineString = "The line is currently: " + CustomerPlaceInLine.join(", ")
+      return lineString;
+    }
+  }
+/*
 else {
   var lineString = "The line is currently: "
       for (var i = 1; deliLine.length >= 1; i++) {
@@ -35,3 +45,4 @@ else {
     }
   }
 }
+*/
