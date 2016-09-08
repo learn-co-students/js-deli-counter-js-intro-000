@@ -44,19 +44,27 @@ ReferenceError: currentLine is not defined -->*/
 
 function currentLine(line) {
   if (line.length === 0) { // <-- Checking to see if someone is in line.
+
     return "The line is currently empty.";
   }
 
   else { // <-- States the person's position, and name in line.
-    return "The line is currently: 1. Bill, 2. Jane, 3. Ann"; // <-- This is static because I don't know how to make it dynamic.
-    //`The line is currently: ${line}`;
-    /* else statement for currentLine function.
-    var output = "The line is currently: ";
-    line.forEach(function(person, index){
-      output += index + person
-      return output;
-    });
-    */
+    var newArray = [];
+    for (var i = 0; i < line.length; i++){
+      newArray.push(`${i + 1}. ${line[i]}`);
+      `The line is currently: ${newArray}`
+    }
   }
-
+return newArray;
 }
+
+// "The line is currently: 1. Bill, 2. Jane, 3. Ann";
+// This is static because I don't know how to make it dynamic.
+//`The line is currently: ${line}`;
+/* else statement for currentLine function.
+var output = "The line is currently: ";
+line.forEach(function(person, index){
+  output += index + person
+  return output;
+});
+*/
