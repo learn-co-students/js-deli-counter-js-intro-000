@@ -36,13 +36,3 @@ else {
       return lineString;
     }
   }
-/*
-else {
-  var lineString = "The line is currently: "
-      for (var i = 1; deliLine.length >= 1; i++) {
-        lineString.push(`${i}. ${deliLine[i]}`)
-        return lineString
-    }
-  }
-}
-*/
