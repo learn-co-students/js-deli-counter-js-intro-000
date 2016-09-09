@@ -51,13 +51,14 @@ function currentLine(line) {
   else { // <-- States the person's position, and name in line.
     var newArray = [];
     for (var i = 0; i < line.length; i++){
-      newArray.push(`${i + 1}. ${line[i]}`);
-      `The line is currently: ${newArray}`
+      newArray.push(` ${i + 1}. ${line[i]}`);
     }
   }
-return newArray;
+return `The line is currently:${newArray}`;
 }
 
+/* newArray.push(`${i + 1}. ${line[i]}`);
+`The line is currently: ${newArray.join(', ')}`; */
 // "The line is currently: 1. Bill, 2. Jane, 3. Ann";
 // This is static because I don't know how to make it dynamic.
 //`The line is currently: ${line}`;
