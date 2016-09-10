@@ -5,9 +5,9 @@ ReferenceError: takeANumber is not defined -->*/
 
 
 function takeANumber(katzDeliLine, personName) {
-   katzDeliLine.push(personName); // Adds person to the line.
+   katzDeliLine.push(personName); // Adds a person to the back of the line.
 return `Welcome, ${personName}. You are number ${katzDeliLine.length} in line.`;
-} // Returns greeting, and position of person in line.
+} // Returns a greeting with the person's name, and their position in line.
 
 
 // ----------------------------------------
@@ -19,11 +19,11 @@ shifts the line: ReferenceError: nowServing is not defined  -->*/
 
 
 function nowServing(katzDeliLine) {
-  if (katzDeliLine.length === 0) { // <-- Checking to see if someone is in line.
+  if (katzDeliLine.length === 0) { // Checking to see if someone is in line.
     return "There is nobody waiting to be served!";
   }
 
-  else { // <-- Taking the next person in line.
+  else { // Taking the next person in line.
     return `Currently serving ${katzDeliLine.shift()}.`;
   }
 }
@@ -43,12 +43,12 @@ ReferenceError: currentLine is not defined -->*/
 
 
 function currentLine(line) {
-  if (line.length === 0) { // <-- Checking to see if someone is in line.
+  if (line.length === 0) { // Checking to see if someone is in line.
 
     return "The line is currently empty.";
   }
 
-  else { // <-- States the person's position, and name in line.
+  else { // States the person's position, and name in line.
     var newArray = [];
     for (var i = 0; i < line.length; i++){
       newArray.push(` ${i + 1}. ${line[i]}`);
