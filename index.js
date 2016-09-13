@@ -18,10 +18,9 @@ function nowServing(katzDeliLine) {
     return "There is nobody waiting to be served!"
   }
 
-  else { // executes if there's at least 1 person on line
-      return `Currently serving ${katzDeliLine.shift()}.` // shift removes beginning element
-                                                          // katzDeliLine.shift returns the removed element
-  }
+
+  return `Currently serving ${katzDeliLine.shift()}.` // shift removes beginning element
+                                                          // katzDeliLine.shift() returns the removed element
 }
 
 
