@@ -7,11 +7,6 @@ function takeANumber(deliLine, customer) {
   return `Welcome, ${customer}. You are number ${deliLine.length} in line.`
 };
 
-/*
-2. Build a function `nowServing`. This function should return the next person in
- line and then remove them from the line. If there is nobody in line, it should return
-  "There is nobody waiting to be served!"
-*/
 function nowServing(deliLine) {
 if (deliLine.length === 0) {
   return `There is nobody waiting to be served!`
@@ -21,7 +16,6 @@ else {
 }
 };
 
-// currentLine()  returns `"The line is currently: 1. Ada 2. Grace"`.  If nobody in line, return `"The line is currently empty."`
 
 function currentLine(deliLine) {
   if (deliLine.length === 0) {
@@ -29,7 +23,7 @@ function currentLine(deliLine) {
 }
 else {
       var CustomerPlaceInLine = [];
-      deliLine.forEach(function(customer, index){ // this will allow us to access the person and index out of the deliLine
+      deliLine.forEach(function(customer, index){
         CustomerPlaceInLine.push((index + 1).toString() + ". " + customer);
       });
       var lineString = "The line is currently: " + CustomerPlaceInLine.join(", ")
