@@ -21,21 +21,16 @@ function currentLine(katzDeliLine) {
 
   if (katzDeliLine.length > 0) {
     var lineStatus = "The line is currently: ";
-    var people = "";
+    var people = [];
 
     // for (var i = 0; i < katzDeliLine.length - 1; i++) {
     for (var i = 0; i < katzDeliLine.length; i++) {
       var position = i + 1;
       var name = katzDeliLine[i];
       var currentPerson = `${position}. ${name}`;
-      if (i < katzDeliLine.length - 1) {
-          people = people + currentPerson + ", ";
-      }
-      else {
-          people = people + currentPerson;
-      }
+      people.push(currentPerson);
     }
-    var currentLineStatus = lineStatus + people;
+    var currentLineStatus = lineStatus + people.join(", ");
   }
   else {
     var currentLineStatus = "The line is currently empty."
