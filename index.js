@@ -16,8 +16,8 @@ function currentLine(deliLine){
   } else {
     var numbersAndNames = [];
     for (var i = 0; i > deliLine.length;i++){
-      numbersAndNames.push()
+      numbersAndNames.push(`${i+1}. ${deliLine[i]}`)
     }
-    return `The line is currently: ${i+1}. ${deliLine[i]}`;
+    return `The line is currently: ${numbersAndNames.join(', ')}`;
   }
 }
