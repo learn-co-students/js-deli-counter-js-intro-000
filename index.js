@@ -14,8 +14,9 @@ function currentLine(deliLine){
   if(deliLine.length === 0){
     return "The line is currently empty.";
   } else {
+    var numbersAndNames = [];
     for (var i = 0; i > deliLine.length;i++){
-      deliLine.shift(i);
+      numbersAndNames.push()
     }
     return `The line is currently: ${i+1}. ${deliLine[i]}`;
   }
