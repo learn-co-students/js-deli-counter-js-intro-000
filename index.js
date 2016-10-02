@@ -20,21 +20,21 @@ function nowServing(deliLine){
   }
 }
 
+
+
 function currentLine(katzDeliLine){
 
-  if(katzDeliLine.length === 1){
-  return  `The line is currently: 1. ${katzDeliLine[0]}`
-}
-  else if(katzDeliLine.length === 2){
-    return `The line is currently: 1. ${katzDeliLine[0]}, 2. ${katzDeliLine[1]}`
-  }
-  else if(katzDeliLine.length === 3){
-    return `The line is currently: 1. ${katzDeliLine[0]}, 2. ${katzDeliLine[1]}, 3. ${katzDeliLine[2]}`
+if(katzDeliLine.length === 0){
+  return "The line is currently empty."
   }
   else{
-    if(katzDeliLine.length === 0){
-      return "The line is currently empty."
+    var output = "The line is currently: ";
+      for(var i = 0; i < katzDeliLine.length; i++){
+        if(katzDeliLine)
+          output += `${i + 1}. ${katzDeliLine[i]}, `;
     }
-
+      output = output.slice(0, -2);
+        return output
   }
+
 }
