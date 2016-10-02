@@ -9,11 +9,11 @@ function takeANumber (katzDeliLine, newPerson) {
 
 function nowServing (line){
   while (line.length > 0){
-// this also works >>    return `Currently serving ${katzDeliLine.shift()}.`;
+// this also works >>    return `Currently serving ${line.shift()}.`;
   var customerName = line[0];
   line.shift();
   return `Currently serving ${customerName}.`;
-// for some reason katzDeliLine.shift() at the end of the loop didnt' work. have to figure out why later.
+// for some reason line.shift() at the end of the loop didnt' work. have to figure out why later.
   }
   return "There is nobody waiting to be served!"
 }
