@@ -1,13 +1,11 @@
 function takeANumber(array, name){
   array.push(name)
-  var i = array.indexOf(name)
-  return `Welcome, ${name}. You are number ${i + 1} in line.`
+    return `Welcome, ${name}. You are number ${array.length} in line.`
 }
 
 function nowServing(array){
   if (array.length > 0){
-    array = array.shift()
-    return `Currently serving ${array}.`
+    return `Currently serving ${array.shift()}.`
   }else{
     return "There is nobody waiting to be served!"
   }
