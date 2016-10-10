@@ -15,16 +15,20 @@ function nowServing(katzDeliLine) {
   }
 
 }
-function currentLine(katzDeliLine) {
-  var x = function checkLine(katzDeliLine) {
-    for (let i = 0; i < katzDeliLine.length; i++) {
-     `${i+1}` + `. ` + katzDeliLine[i] + `, `;
-    }
-  }
-  if (katzDeliLine.length > 0) {
 
-    return `The line is currently ${x}`;
-  } else {
-    return "The line is currently empty.";
+function currentLine(katzDeliLine) {
+var msg = "The line is currently: ";
+var lastPerson = katzDeliLine.length + ". " + katzDeliLine[katzDeliLine.length - 1];
+var people = function() {
+  for (var i = 0; i < katzDeliLine.length - 1; i++) {
+  msg += `${i+1}` + "." + " " + katzDeliLine[i] + ", ";
   }
+ };
+ if (katzDeliLine.length > 0) {
+   people();
+   return `${msg += lastPerson}`;
+ } else {
+   return "The line is currently empty.";
+ }
+
 }
