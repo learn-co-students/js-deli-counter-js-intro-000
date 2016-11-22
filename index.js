@@ -52,9 +52,7 @@ if (katzDeliLine.length === 0) {
 }
 for(var i = 0; i < katzDeliLine.length; i++){
   var index = i + 1
-  if (katzDeliLine.length === 0) {
-    return  "The line is currently empty."
-  } else if (i >= 0 && i <= katzDeliLine.length) {
+   if (i >= 0 && i <= katzDeliLine.length) {
     nuArray.push(" " + index + ". " + katzDeliLine[i])
     }
   } return `The line is currently:${nuArray}`
