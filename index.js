@@ -41,18 +41,22 @@ function currentLine(katzDeliLine){
 
 // that returns the current line.
 // For example, if katzDeliLine is currently
-// ["Ada", "Grace"], currentLine(katzDeliLine) would return
+// ["Ada", "Grace"], currentLine(katzDeliLine)
+// would return
 // "The line is currently: 1. Ada 2. Grace".
 // If there is nobody in line, it should
 // return "The line is currently empty."
-var boaZ = ("The line is currently:")
-var moaB = katzDeliLine[p]
-
-for (let p = 0; n >= 1; p++) {
-    if (katzDeliLine.length >= 1) {
-      return boaZ + moaB
-  } else {
-      return ("The line is currently empty.")
-  }
- }
+var nuArray = []
+if (katzDeliLine.length === 0) {
+  return  "The line is currently empty."
 }
+for(var i = 0; i < katzDeliLine.length; i++){
+  var index = i + 1
+  if (katzDeliLine.length === 0) {
+    return  "The line is currently empty."
+  } else if (i >= 0 && i <= katzDeliLine.length) {
+    nuArray.push(" " + index + ". " + katzDeliLine[i])
+    }
+  } return `The line is currently:${nuArray}`
+}
+ // katzDeliLine[i]
