@@ -52,9 +52,9 @@ if (katzDeliLine.length === 0) {
 }
 for(var i = 0; i < katzDeliLine.length; i++){
   var index = i + 1
-   if (i >= 0 && i <= katzDeliLine.length) {
+
     nuArray.push(" " + index + ". " + katzDeliLine[i])
-    }
+
   } return `The line is currently:${nuArray}`
 }
  // katzDeliLine[i]
