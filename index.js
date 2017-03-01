@@ -13,7 +13,13 @@ function nowServing(deliLine) {
 }
 
 function currentLine(katzDeliLine) {
-  return ("The line is currently: " + for (let i = 0; i<katzDeliLine.length; i++) {
-    (i++ +". katzDeliLine[i], ");
-  }) 
+  if (katzDeliLine.length === 0) {
+    return "The line is currently empty."
+  }
+  var structuredString = "The line is currently: "
+  for (let i = 0; i<katzDeliLine.length; i++) {
+    structuredString += (`${i+1}. ${katzDeliLine[i]}, `);
+  }
+  structuredString = structuredString.substring(47, 0)
+  return structuredString
 }
