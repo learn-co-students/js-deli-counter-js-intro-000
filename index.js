@@ -1,30 +1,28 @@
 var katzDeli = [];
 
-function takeANumber(katzDeliLine, name){
-  katzDeliLine.push(name);
-
-for (var i = 0; i < array.length; i++) {
-  return array[i]
+function takeANumber(line, name){
+  var lineL = line.push(name);
+    return `Welcome, ${name}. You are number ${lineL} in line.`
 }
 
+function nowServing(line){
+  if (line.length === 0) {
+    return 'There is nobody waiting to be served!'
 
+  } else {
+	return `Currently serving ${line.shift()}.`
+}
 }
 
-function nowServing(n) {
-  const deliLine = []
+function currentLine(names){
+  if (names.length === 0 ){
+  return "The line is currently empty."
+}
 
-  for (var i = 0; i < deliLine.length; i++) {
-    return `Currently serving ${deliLine[i]}.`
+  var line = []
+  for (var i = 0; i < names.length;){
+      line.push(' ' + [i + 1] + '. ' + names[i++])
+
   }
-
-  return "There is nobody waiting to be served!"
-
-
-}
-
-function currentLine(){
-  const array = []
-
-
-
+  return `The line is currently:${line}`
 }
