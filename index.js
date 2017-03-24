@@ -1,21 +1,30 @@
 var line = [];// 'Ada', 'Grace', 'Kent' ];
 
-function takeANumber(name){
+function takeANumber(line, name){
   line.push(name)
-  //var position = (line.indexOf(name))+1
-  //return (`Welcome, ${name}. You are number ${position} in line.`)
-  return (`Welcome, ${name}. You are number ${line.lenght} in line.`)
+//  var position = (line.indexOf(name))+1
+//  return (`Welcome, ${name}. You are number ${position} in line.`)
+  return (`Welcome, ${name}. You are number ${line.length} in line.`)
 }
 
-//y = (x.indexOf(4))+1
-
-function nowServing() {
-    if (line === []) {return ('There is nobody waiting to be served!')
-  } else { return(`Currently serving ${line[0]}.`)
-       line.shift()};
-    }
+function nowServing(line) {
+  if (!line.length) {return ('There is nobody waiting to be served!')
+  } 
+  else { return(`Currently serving ${line.shift()}.`)
+  }
+}
 
 function currentLine(line) {
-  
+  if (!line.length) {return ("The line is currently empty.")
+  }
+  else { 
+    const placeAndName = []
+    
+    for (let i = 0, l = line.length; i < l; i++) {
+    placeAndName.push(`${i + 1}. ${line[i]}`)
+    }
+    
+    return `The line is currently: ${placeAndName.join(', ')}`
+  }   
 }
 
