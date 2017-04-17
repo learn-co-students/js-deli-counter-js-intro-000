@@ -10,10 +10,9 @@ function takeANumber(katzDeliLine, personName) {
     if (katzDeliLine[i] === personName) { return i.toString() }
   }
   if (personName[0].length > 1) {
-    katzDeliLine.push(personName[0]);
-    takeANumber(katzDeliLine, personName.slice(1))
+    takeANumber(katzDeliLine, personName.slice(1));
   } else {
-    katzDeliLine[katzDeliLine.length] = personName;
+    katzDeliLine.push(personName);
   }
   return "Welcome, " + personName + ". You are number " + katzDeliLine.length +" in line.";
 }
