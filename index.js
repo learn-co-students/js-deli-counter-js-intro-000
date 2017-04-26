@@ -13,14 +13,15 @@ function nowServing(line) {
   return `Currently serving ${line.shift()}.`
 }
 
-const arr = []
 function currentLine(line) {
-  if(!line.length) {
+  if (!line.length) {
     return "The line is currently empty."
   }
-  for (let i = 0; i < line.length; i++) {
-    arr.push(`${i + 1}. ${line[i]}`)
+
+  var newarr = []
+  for(let i =0; i < line.length; i++) {
+    newarr.push(`${i + 1}. ${line[i]}`)
   }
 
-  return `The line is currently: ${arr.join(", ")}`
+  return `The line is currently: ${newarr.join(", ")}`
 }
