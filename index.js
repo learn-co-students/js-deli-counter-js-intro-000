@@ -1,6 +1,6 @@
 function takeANumber(array, name){
   var spot = array.length + 1;
-  array.push(name); 
+  array.push(name);
   return `Welcome, ${name}. You are number ${spot} in line.`
 }
 
@@ -14,7 +14,7 @@ function nowServing(array){
 
 function currentLine(array){
   var response = "The line is currently";
-  var tailer; 
+  var tailer;
   if (array.length < 1){
     tailer = " empty.";
     return response + tailer;
