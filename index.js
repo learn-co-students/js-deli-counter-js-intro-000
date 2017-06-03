@@ -20,8 +20,7 @@ function currentLine(katzDeliLine) {
     for (let i = 0; i < katzDeliLine.length; i++) {
       string += `${i + 1}. ${katzDeliLine[i]}, `;
     }
-    string = string.slice(0, -2); // Remove last two characters from string
-    return string;
+    return string.slice(0, -2); // Remove last 2 characters from string, then return
   } else {
     return "The line is currently empty.";
   }
