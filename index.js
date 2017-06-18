@@ -39,10 +39,10 @@ function currentLine(katzDeliLine) {
   if (katzDeliLine.length < 1) {
     return "The line is currently empty."
   }
+  var results = [];
   for (var i = 0; i < katzDeliLine.length; i++){
-    var results = [];
-    var current = [i + 1] + ". " + katzDeliLine[i];
+    var current = " " + [i + 1] + ". " + katzDeliLine[i];
     results.push(current);
 
-  } return "The line is currently: " + results;
+  } return "The line is currently:" + results;
 }
