@@ -15,14 +15,15 @@ function nowServing(katzDeliLine) {
 
 function currentLine(line) {
   var people = [];
+
   if (line.length === 0) {
     return 'The line is currently empty.'
-  } else {
-    for (var i = 0; i < line.length; i++) {
+  }
+
+  for (var i = 0; i < line.length; i++) {
       var name = line[i];
       people.push(`${i + 1}. ${name}`);
     }
-    console.log(people);
-    return `The line is currently: ${people.join(', ')}`
-  }
+    // console.log(people);
+  return `The line is currently: ${people.join(', ')}`
 }
