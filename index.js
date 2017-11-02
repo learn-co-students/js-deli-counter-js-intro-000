@@ -10,5 +10,5 @@ var nowServing = (array ,deliLine) => {
 }
 
 var currentLine = array => {
-  return array.length === 0 ? "The line is currently empty." : "The line is currently: " +  [array.length - 2]+ ". " + array[array.length-3] + ", " +[array.length-1] + ". " + array[array.length - 2] + ", " + array.length + ". " + array[array.length - 1];
+  return array.length === 0 ? "The line is currently empty." : "The line is currently: " +  [array.length - 2] + ". " + array[array.length-3] + ", " +[array.length-1] + ". " + array[array.length - 2] + ", " + array.length + ". " + array[array.length - 1];
 }
