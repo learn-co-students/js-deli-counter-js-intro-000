@@ -35,9 +35,11 @@ function currentLine(line) {
     for(let i = 0; i < line.length; i++) {
     total.push(i+1 + ". " + line[i])
   }
-    console.log ('The line is currently: ' + total.join(', '))
-    console.log ('The line is currently: ' + total)
+    //console.log ('The line is currently: ' + total.join(', '))
+    //console.log ('The line is currently: ' + total)
+  //  I have to join them by the comma bc they are individual strings not one 
     return ('The line is currently: ' + total.join(', '))
+    //return total
     //return('The line is currently: ' + line[i].length + '.' + ' ' + line[i])
 
 }
