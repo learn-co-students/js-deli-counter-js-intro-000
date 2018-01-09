@@ -34,12 +34,12 @@ function currentLine (currentLine) {
     // empty."
 
     if ( currentLine.length >= 1 ) {
-        var line = 'The line is currently: '
+        var line = 'The line is currently:'
         for (var i=1; i < (currentLine.length + 1); i++) {
             if ( i === 1 ) {
-                line += `${i}. ${currentLine[i - 1]}`
+                line = `${line} ${i}. ${currentLine[i - 1]}`
             } else {
-                line += `, ${i}. ${currentLine[i - 1]}`
+                line = `${line}, ${i}. ${currentLine[i - 1]}`
             }
         }
         return line
