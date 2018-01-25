@@ -21,7 +21,7 @@ function currentLine(katzDeliLine) {
     var lineList = "";
     for (let i = 1; i <= katzDeliLine.length; i++) {
       const index = i - 1;
-      if (i = katzDeliLine.length) {
+      if (i == katzDeliLine.length) {
         lineList += `${i}. ${katzDeliLine[index]}`
       } else {
         lineList += `${i}. ${katzDeliLine[index]}, `
