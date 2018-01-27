@@ -13,23 +13,9 @@ var katzDeli = [];
 
 //INSTRUCTIONS WERE COMPLETE UNCLEAR ... following new instructions provided by error text
 
-var katzDeliQueue=[]
-var i=0;
-
-function takeANumberOnly (katzDeliLine) {
-  katzDeliLine[i] = i+1;
-  i++;
-  return i;
-
-
-}
-
-
 function takeANumber (katzDeliLine, newName){
 
-
   katzDeliLine.push(newName); //this should do the appending
-  //katzDeliLine[katzDeliLine.length-1].number
   return `Welcome, ${katzDeliLine[katzDeliLine.length-1]}. You are number ${katzDeliLine.length} in line.`
   //So... originally I had ${newName}, but let's see what this galaxy-class starship can do
 }
@@ -55,7 +41,6 @@ if (katzDeliLine.length === 0) {
     // ^^ chops off the array's head... after we took note of what the element was
 
     return `Currently serving ${currentlyServed}.`;
-
   }
 }
 
