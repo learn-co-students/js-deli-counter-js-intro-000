@@ -1,4 +1,4 @@
-var katzDeli = [];
+// var katzDeli = [];
 var katzDeliLine = [];
 
 var takeANumber = (katzDeliLine, name) => {
@@ -9,7 +9,8 @@ var takeANumber = (katzDeliLine, name) => {
 
 var nowServing = (katzDeliLine) => {
   var nextUp = katzDeliLine[0]
-  if (katzDeliLine[0] == null) {
+  if (katzDeliLine[0] === undefined) {
+    // could also look for katzDeliLine.length === 0 or == null, but not as good.
     return "There is nobody waiting to be served!"
   }
   else {
@@ -21,7 +22,8 @@ var nowServing = (katzDeliLine) => {
 var currentLine = (katzDeliLine) => {
   var line = katzDeliLine.length
   var lineString = "The line is currently: "
-  if (katzDeliLine[0] == null) {
+  if (katzDeliLine[0] === undefined) {
+    // could also look for katzDeliLine.length === 0
     return "The line is currently empty."
   }
   else {
