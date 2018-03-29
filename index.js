@@ -1,10 +1,17 @@
 var takeANumber = function(line, name) {
   line.push(name);
 
-  return `Welcome, ${name[length - 1]}. You are number ${line.length} in line.`;
+  return `Welcome, ${line[line.length - 1]}. You are number ${line.length} in line.`;
 };
 
-var nowServing = function() {};
+var nowServing = function(line) {
+  if (line.length > 0) {
+    var customer = line.shift();
+    return `Currently serving ${customer}.`;
+  }
+
+  return 'There is nobody waiting to be served!';
+};
 
 var currentLine = function(line) {
   return line.length === 0 ? 'The line is currently empty.'
