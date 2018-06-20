@@ -1,7 +1,7 @@
 var katzDeli = [];
 
 function takeANumber (katzDeliLine, name) {
-  "Build a function that a new customer will use when entering the deli.";
+  //Build a function that a new customer will use when entering the deli.//
   
   var numberAhead = katzDeliLine.length;
   var currentPosition = numberAhead + 1;
@@ -13,7 +13,7 @@ function takeANumber (katzDeliLine, name) {
 } 
 
 function nowServing (katzDeliLine) {
-  "This function should return the first person in line and then remove that individual from the line.";
+  //This function should return the first person in line and then remove that individual from the line.//
   
   var deliLineCount = katzDeliLine.length;
   
@@ -33,7 +33,7 @@ function nowServing (katzDeliLine) {
 }
 
 function currentLine (katzDeliLine) {
-  "Returns the current line.";
+  //Returns the current line.//
   
   var deliLineCount = katzDeliLine.length;
   
