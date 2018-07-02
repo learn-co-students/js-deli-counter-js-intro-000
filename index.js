@@ -24,8 +24,8 @@ function currentLine(katzDeliLine){
 
   var array = [];
 
-  katzDeliLine.forEach((element, index) => {
-    array.push(` ${index + 1}. ${element}`);
+  katzDeliLine.forEach((name, index) => {
+    array.push(` ${index + 1}. ${name}`);
   });
 
   return "The line is currently:" + array.join();
