@@ -22,14 +22,13 @@ function currentLine(katzDeliLine){
     return "The line is currently empty."
   }
 
-  var string = "The line is currently:"
   var array = [];
 
   katzDeliLine.forEach((element, index) => {
     array.push(` ${index + 1}. ${element}`);
   });
 
-  return string + array.join();
+  return "The line is currently:" + array.join();
 }
 
 // function currentLine(katzDeliLine){
