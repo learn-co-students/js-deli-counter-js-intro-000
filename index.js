@@ -17,13 +17,29 @@ function nowServing(katzDeliLine) {
 }
 
 function currentLine(katzDeliLine){
+
   if(katzDeliLine.length === 0) {
     return "The line is currently empty."
   }
-  var string = "The line is currently: "
-  for(var i = 0; i < katzDeliLine.length; i++){
-    string = string + `${i + 1}. ${katzDeliLine[i]}, `
-  }
-  string = string.substring(0, string.length-2)
-  return string;
+
+  var string = "The line is currently:"
+  var array = [];
+
+  katzDeliLine.forEach((element, index) => {
+    array.push(` ${index + 1}. ${element}`);
+  });
+
+  return string + array.join();
 }
+
+// function currentLine(katzDeliLine){
+//   if(katzDeliLine.length === 0) {
+//     return "The line is currently empty."
+//   }
+//   var string = "The line is currently: "
+//   for(var i = 0; i < katzDeliLine.length; i++){
+//     string = string + `${i + 1}. ${katzDeliLine[i]}, `
+//   }
+//   string = string.substring(0, string.length-2)
+//   return string;
+// }
