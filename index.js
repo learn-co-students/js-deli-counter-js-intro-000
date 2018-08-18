@@ -32,5 +32,4 @@ if (katzDeliLine.length === 0) {
 
     return string + finalAnswer;
 
-    return line
  }
