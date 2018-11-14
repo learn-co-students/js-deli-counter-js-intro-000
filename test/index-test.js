@@ -1,4 +1,57 @@
-/*global describe, it */
+function takeANumber(katzDeliLine, name){
+  katzDeliLine.push(name)
+
+  let numberInLine = katzDeliLine.length
+
+  return `Welcome, ${name}. You are number ${numberInLine} in line.`
+}
+
+function nowServing(katzDeliLine) {
+  let firstPerson = ''
+
+  // checks that the line is empty
+  if(katzDeliLine.length === 0){
+    return "There is nobody waiting to be served!"
+  }
+
+  // removes first person from line
+  // firstPerson = katzDeliLine.splice(0,1)[0]
+  firstPerson = katzDeliLine.shift()
+
+  return `Currently serving ${firstPerson}.`
+}
+
+function currentLine(katzDeliLine){
+
+  if(katzDeliLine.length === 0){
+    return "The line is currently empty." // implied else
+  }
+
+  let status = "The line is currently:"
+  for (let i = 0; i < katzDeliLine.length; i++){
+    let current = katzDeliLine[i]
+    let position = i + 1
+
+    // BEGIN OPTION 1
+    // if (i === katzDeliLine.length - 1) {
+    //   status += ` ${position}. ${current}`
+    // } else {
+    //   status += ` ${position}. ${current},`
+    // }
+    // END OF OPTION 1
+
+    // BEGIN OPTION 2
+    let formatted = ` ${position}. ${current}`
+    // if we are not in the last element, add a comma
+    if (i !== katzDeliLine.length-1) {
+      formatted += ","
+    }
+    status += formatted
+    // END OF OPTION 2
+  }
+
+  return status
+}
 
 describe('deli', () => {
   describe('takeANumber', () => {
