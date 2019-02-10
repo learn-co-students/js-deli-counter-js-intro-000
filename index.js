@@ -23,6 +23,7 @@ function currentLine(line) {
     } else {
       message = message + (i + 1) + ". " +  line[i] + ", "; 
     }
+    i++;
   }
   return message;
 }
