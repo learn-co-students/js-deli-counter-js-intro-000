@@ -15,6 +15,7 @@ function nowServing(katzDeliLine) {
   }
 }
 
+
 function currentLine(katzDeliLine) {
   var count = katzDeliLine.length
   var curLine = []
@@ -29,3 +30,21 @@ function currentLine(katzDeliLine) {
     return (`The line is currently: ${curLine}`)
   }
 }
+
+
+
+/*
+function currentLine(katzDeliLine) {
+  var count = katzDeliLine.length
+  var curLine = []
+  if (count < 1) {
+    return "The line is currently empty."
+  }
+  else {
+    for (let i = 1; i < count; i++) {
+      curLine.push(`${i}. ${katzDeliLine[0]}, ${i+1}. ${katzDeliLine[i]} `)
+    }
+    return (`The line is currently: ${curLine}`)
+  }
+}
+*/
