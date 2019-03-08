@@ -28,16 +28,16 @@ function currentLine(katzDeliLine){
 function line.length
 
 function line.length() {
-  return takeANumber1 + takeANumber2;
+  return takeANumber1 + takeANumber2 +takeANumber3;
 }
 
-  takeANumber(katzDeliLine, 'Ada');
-  takeANumber(katzDeliLine, 'Grace);
-  takeANumber(katzDeliLine, Kent);
-  takeANumber(katzDeliLine, Proof);
-  takeANumber(katzDeliLine, Taster);
+  takeANumber(katzDeliLine, "Ada");
+  takeANumber(katzDeliLine, "Grace");
+  takeANumber(katzDeliLine,  "Kent");
+  takeANumber (katzDeliLine, "Matz");
 
-ccurrentLine(katzDeliLine); // "The line is currently: 1. Ada, 2. Grace, 3. Kent"
+
+currentLine(katzDeliLine); // "The line is currently: 1. Ada, 2. Grace, 3. Kent"
 
 nowServing(katzDeliLine); // "Currently serving Ada."
 
