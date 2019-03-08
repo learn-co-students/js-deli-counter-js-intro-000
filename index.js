@@ -36,7 +36,6 @@ function line.length() {
   takeANumber(katzDeliLine,  "Kent");
   takeANumber (katzDeliLine, "Matz");
 
-
 currentLine(katzDeliLine); // "The line is currently: 1. Ada, 2. Grace, 3. Kent"
 
 nowServing(katzDeliLine); // "Currently serving Ada."
