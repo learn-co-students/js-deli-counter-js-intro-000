@@ -1,53 +1,30 @@
-/*global describe, it */
 
-describe('deli', () => {
-  describe('takeANumber', () => {
-    var katzDeli;
-    var otherDeli;
+var katzDeliLine = []
 
-    beforeEach(() => {
-      katzDeli = [];
-      otherDeli = ["Steven", "Blake", "Avi"];
-    });
 
-    it('adds a person to the line', () => {
-      expect(takeANumber(katzDeli, 'Ada')).toEqual("Welcome, Ada. You are number 1 in line.");
-      expect(katzDeli).toEqual(['Ada']);
-    });
+function takeANumber(katzDeliLine, name) {
+  katzDeliLine.push(name);
+  return `"Welcome, ${name}. You are number ${katzDeliLine.length} in line.`;
+}
 
-    it('appends the person the end of the line if there are already people on it', () => {
-      expect(takeANumber(otherDeli, 'Grace')).toEqual("Welcome, Grace. You are number 4 in line.");
-      expect(otherDeli).toEqual(["Steven", "Blake", "Avi", "Grace"]);
-    });
+function nowServing (katzDeliLine) {
+  if
+  (katzDeliLine.length > 0) {
+    var report = `Currently serving ${katzDeliLine[0]}.`;
+  katzDeliLine.shift;
+return report
+ } else { return "There is nobody waiting to be served!"; }
+}
 
-    it("properly handles multiple people being added", () => {
-      takeANumber(katzDeli, 'Ada');
-      takeANumber(katzDeli, 'Grace');
-      takeANumber(katzDeli, 'Kent');
+function currentLine (katzDeliLine){
+  if(katzDeliLine.length === 0){
+    return "The line is currently empty."
+  }
 
-      expect(katzDeli).toEqual(["Ada", "Grace", "Kent"]);
-    });
-  });
+   var myString = `The line is currently: 1. ${katzDeliLine[0]}`
 
-  describe('nowServing', () => {
-    it('returns the line is empty when no one is on line', () => {
-      expect(nowServing([])).toEqual("There is nobody waiting to be served!");
-    });
-
-    it('returns an announcement about the person it is serving, and shifts the line', () => {
-      const deliLine = ["Steven", "Blake", "Avi"]
-      expect(nowServing(deliLine)).toEqual("Currently serving Steven.");
-      expect(deliLine).toEqual(["Blake", "Avi"]);
-    });
-  });
-
-  describe('currentLine(line)', () => {
-    it('returns "The line is currently empty." if no one is in line', () => {
-      expect(currentLine([])).toEqual("The line is currently empty.");
-    });
-
-    it('says who is in line when there are people waiting', () => {
-      expect(currentLine(["Bill", "Jane", "Ann"])).toEqual("The line is currently: 1. Bill, 2. Jane, 3. Ann");
-    });
-  });
-})
+   for(let i = 1; i<katzDeliLine.length;i++){
+  myString += `, ${i+1}. ${katzDeliLine[i]}`
+}
+return myString
+}
