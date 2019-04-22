@@ -1,9 +1,8 @@
 function takeANumber(joeDeli, Didi){
   joeDeli.push(Didi)
-  //for(i= 0; i < joeDEli.length; i++){
-
   return `Welcome, ${joeDeli[joeDeli.length-1]}. You are number ${joeDeli.length} in line.`
 }
+
 
 function nowServing(joeDeli){
   if (joeDeli.length ===0){
@@ -13,10 +12,10 @@ function nowServing(joeDeli){
   }
 }
 
+
 function currentLine(joeDeli){
   let line = ""
   if (joeDeli.length ===0){
-
     line = "The line is currently empty."
   }else{
 
@@ -24,9 +23,8 @@ function currentLine(joeDeli){
    for (let i = 0; i < joeDeli.length; i++){
       newJoeDeli[i] =`${i+1}. ${joeDeli[i]}`
    }
-   console.log (newJoeDeli)
+
    line =  "The line is currently: " + newJoeDeli.join(', ')
   }
-return line
+ return line
 }
-currentLine(['hari', 'julie', 'marie'])
