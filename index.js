@@ -12,15 +12,16 @@ function nowServing(line) {
   }
 }
 
-var Line1 = [];
+
 function currentLine(line) {
+  var line1 = [];
   if (line.length == 0) {
     return `The line is currently empty.`
   }
   else {
     for (var i = 0; i < line.length; i++) {
-      Line1.push(' '+[i+1]+'. '+ line[i]);
+      line1.push(' '+[i+1]+'. '+ line[i]);
     }
-    return `The line is currently:` + Line1;
+    return `The line is currently:${line1}`;
   }
 }
