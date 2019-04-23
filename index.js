@@ -1,3 +1,9 @@
+// var line = [];
+// function takeANumber() {
+//   line.push({});
+//   return `You are number ${line.length} in line.`;
+// }
+
 function takeANumber(line, name) {
   line.push(`${name}`);
   return `Welcome, ${name}. You are number ${line.length} in line.`;
