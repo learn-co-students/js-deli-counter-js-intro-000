@@ -16,13 +16,10 @@ function nowServing(line) {
 function currentLine(line) {
   if (line.length > 0) {
     var list = []
-    var head = ["The line is currently:"]
     for (var i = 0; i < line.length; i++) {
       list.push(`${i + 1}. ${line[i]}`)
     }
-    var list_comma = list.join(", ")
-    var msg = head.concat(list_comma)
-    return msg.join(" ")
+    return `The line is currently: ${list.join(", ")}`
   } else {
     return "The line is currently empty."
   }
