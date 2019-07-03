@@ -3,10 +3,6 @@ function takeANumber(katzDeliLine, name) {
       return "Welcome, " + name + ". You are number " + (katzDeliLine.indexOf(name) + 1) + " in line."
 }
 
-
-
- // takeANumber(katzDeliLine, "Ada")
-
  function nowServing(katzDeliLine) {
 	if (katzDeliLine[0] === undefined) {
 		return "There is nobody waiting to be served!"
@@ -14,9 +10,7 @@ function takeANumber(katzDeliLine, name) {
 		var firstInLine = katzDeliLine.shift()
 		return "Currently serving " + firstInLine + "."
 	}
-
  }
-
 
   function currentLine(line) {
    var lineNum = [];
@@ -27,5 +21,4 @@ function takeANumber(katzDeliLine, name) {
      lineNum.push(` ${i+1}. ${line[i]}`);
  	}
    return "The line is currently:" + lineNum;
-
   }
