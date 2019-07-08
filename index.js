@@ -25,7 +25,6 @@ var currentLine = (line) => {
       } else {
         response = response + (i + 1) + ". " + line[i] + ", "
       }
-
     }
     return response
   }
