@@ -26,5 +26,5 @@ var arr = []
 for ( var i = 0; i < line.length; i++){
 arr.push(` ${i+1}. ${line[i]}`)
 }
-return `The line is currently:${arr} `
+return `The line is currently:${arr}`
 }
