@@ -19,18 +19,6 @@ function nowServing(line) {
 // console.log(nowServing(pokemon));
 // console.log(pokemon);
 
-/* var testArray = ['Cat', 'Dog'];
-
-function currentLine(line) {
-  line.forEach(arrayFunction);
-  function arrayFunction(item, index) {
-    return `${index}. ${item}`;
-  };
-};
-
-console.log(currentLine(testArray));
-*/
-
 function newPokemonArray(line) {
   for (let i = 0; i < line.length; i++) {
     line[i] = `${line.indexOf(line[i])+1}. ${line[i]}`;
