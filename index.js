@@ -23,9 +23,9 @@ function currentLine(x) {
     line = 'The line is currently: '
     for(var i = 0; i < x.length ; i++) {
       if (i === 0){
-        line = line + (i + 1) + '. ' + x[i];
+        line = line + (i + 1) + '. ' + x[i]
       } else {
-        line = line + ', ' + (i + 1) + '. ' + x[i];
+        line = line + ', ' + (i + 1) + '. ' + x[i]
       }
     }
   }
