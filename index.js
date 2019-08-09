@@ -9,7 +9,7 @@ function takeANumber(line, name) {
 // let pokemon = [];
 
 function nowServing(line) {
-  if (line[0] === undefined) {
+  if (line.length === 0) {
     return "There is nobody waiting to be served!";
   } else {
     return `Currently serving ${line.shift()}.`;
@@ -27,7 +27,7 @@ function customerLine(line) {
 };
 
 function currentLine(line) {
-  if (line[0] === undefined) {
+  if (line.length === 0) {
     return "The line is currently empty.";
   } else {
     return `The line is currently: ${customerLine(line).join(', ')}`;
