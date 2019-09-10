@@ -15,15 +15,13 @@ if(deliLine.length === 0){
 name = deliLine.shift();
 return `Currently serving ${name}.`
 }
-
-function currentLine(line) {
-  let i = 0;
-  while (i < line.length) {
-    line.push(`${[i+1]}. ${line[i]}`)
-    i++;
-  }
-  if (line.length === 0) {
-    return "The line is currently empty.";
-  } else
-  return(`The line is currently: ${line}`);
+function  currentLine (katzDeliLine) {
+  if (katzDeliLine.length===0) {
+  return "The line is currently empty.";
+}
+   let customerNumber = [];
+   for (var i = 0; i<katzDeliLine.length; i++) {
+   customerNumber.push(`${i+1}. ${katzDeliLine[i]}`)
+}
+  return "The line is currently: " + customerNumber.join(", ");
 }
