@@ -1,19 +1,29 @@
-var katzDeliLine = [];
+function currentLine(line) {
+  if (!line.length) {
+    return "The line is currently empty."
+  }
 
-takeANumber(katzDeliLine, "Ada"); // "Welcome, Ada. You are number 1 in line."
-takeANumber(katzDeliLine, "Grace"); // "Welcome, Grace. You are number 2 in line."
-takeANumber(katzDeliLine, "Kent"); // "Welcome, Kent. You are number 3 in line."
+  const numbersAndNames = []
 
-currentLine(katzDeliLine); // "The line is currently: 1. Ada, 2. Grace, 3. Kent"
+  for (let i = 0, l = line.length; i < l; i++) {
+    numbersAndNames.push(`${i + 1}. ${line[i]}`)
+  }
 
-nowServing(katzDeliLine); // "Currently serving Ada."
+  /* Keep in mind, join() is a a shorthand for looping and building
+   * into a String. */
+  return `The line is currently: ${numbersAndNames.join(', ')}`
+};
 
-currentLine(katzDeliLine); // "The line is currently: 1. Grace, 2. Kent"
+function nowServing(line) {
+  if (!line.length) {
+    return "There is nobody waiting to be served!"
+  }
 
-takeANumber(katzDeliLine, "Matz"); // "Welcome, Matz. You are number 1 in line."
+  return `Currently serving ${line.shift()}.`
+};
 
-currentLine(katzDeliLine); // "The line is currently: 1. Grace, 2. Kent, 3. Matz"
+function takeANumber(line, name) {
+  line.push(name)
 
-nowServing(katzDeliLine); // "Currently serving Grace."
-
-currentLine(katzDeliLine);
+  return `Welcome, ${name}. You are number ${line.length} in line.`
+};
