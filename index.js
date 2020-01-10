@@ -1,13 +1,28 @@
 function takeANumber(deliline, name) {
-  return `Welcome ${name}. You are number ${deliline.indexOf(name) + 1}.`
+  deliline.push(name)
+  return `Welcome, ${name}. You are number ${deliline.indexOf(name) + 1} in line.`
 }
 
 function nowServing(deliline) {
   if (deliline[0] == null) {
-    return "The line is currently empty.";
+    return 'There is nobody waiting to be served!';
   }
   else {
-    return deliline[0];
+    var announce = "Currently serving " + deliline[0] + ".";
     deliline.shift();
+    return announce;
+  }
+}
+
+function currentLine(deliline) {
+
+  if (deliline.length == 0) {
+    return "The line is currently empty."
+  }
+  else {
+    for (var i = 0; i < deliline.length; i++) {
+      deliline[i] = " " + `${i+1}. ${deliline[i]}`
+    }
+    return "The line is currently:" + deliline;
   }
 }
