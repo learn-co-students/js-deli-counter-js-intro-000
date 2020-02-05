@@ -22,19 +22,17 @@ function nowServing(estherDeliLine) {
 
 
 function currentLine(estherDeliLine) {
+  
   if(estherDeliLine.length === 0) {
     return "The line is currently empty.";
   } else {
+      var message = `The line is currently: `;
       
-    for(var i = 0; i < estherDeliLine.length; i++) {
-      
-      var count = 1;
-      
-      estherDeliLine.unshift(`${count}.`);
-      count ++;
-      
-      var message = `The line is currently: ${estherDeliLine}`;
+        for(var i = 0; i < estherDeliLine.length -1; i++) {
+          message += `${i+1}. ${estherDeliLine[i]}, `;//.slice(-1,1);
+        }
+      message += `${i+1}. ${estherDeliLine[i]}`;  
       return message;
-    }
   }
 }
+
