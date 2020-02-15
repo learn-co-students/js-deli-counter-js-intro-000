@@ -7,14 +7,13 @@ function takeANumber(customerLine, name) {
 
 
 function nowServing(customerLine) {
-  for (var i = 0; i < customerLine.length; i++){
-    if (customerLine.length !== 0) {
+  if (customerLine.length !== 0) {
       return (`Currently serving ${customerLine.shift()}.`);
     } else {
       return "There is nobody waiting to be served!";
     }
   }
-}
+
 
 function currentLine(line) {
   if (line.length === 0){
