@@ -14,10 +14,13 @@ if (katzDeliLine.length>0){
 }
 
 function currentLine (katzDeliLine){
+var string = 'The line is currently: '
 if (katzDeliLine.length>0){
   for (var i = 0; i < katzDeliLine.length; i++) {
-    var count = (i +1)
-    return `The line is currently: ${count}. ${katzDeliLine[i]}`}
+    string += `${i+1}. ${katzDeliLine[i]}`
+    if(i<katzDeliLine.length - 1){string+=', '}
+  }
+  return string
 } else {
   return "The line is currently empty."
 }
