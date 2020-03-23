@@ -4,7 +4,7 @@ function takeANumber(deliLine, customerName) {
   var customerPlaceInLine = customerIndex + 1
   var nameOfCustomerInLine = deliLine[customerIndex]
   for (let i = 0; i < customerName.length; i++) {
-    var solutionString = `Welcome, ${customerName}. You are number ${customerPlaceInLine} in line.`
+    var solutionString = `Welcome, ${nameOfCustomerInLine}. You are number ${customerPlaceInLine} in line.`
   }
   return solutionString
 }
