@@ -20,13 +20,13 @@ function currentLine(line)
   {
     return `The line is currently empty.`
   }
+
+  var names
   for(let i = 0; i < line.length; i += 1)
   {
-    string = string + `${i + 1}. ${line[i]}`
-    if(i + 1 != line.length)
-    {
-      string = string + `, `
-    }
+    names.add(`${i + 1}. ${line[i]}`)
   }
-  return string
+  
+  string = string + names.join(", ")
+  return string;
 }
