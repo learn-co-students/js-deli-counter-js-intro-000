@@ -11,6 +11,7 @@
 // Don't get their hopes up by telling them they are number 6 in line.
 
 function takeANumber(line, name) {
+<<<<<<< HEAD
 
   var counter = 0;
 
@@ -70,4 +71,7 @@ function currentLine(array) {
     }
     return `${str}${arr.join(', ')}`;
   }
+=======
+  return `Welcome, ${name}. You are number ${line}in line.`
+>>>>>>> f97e1cc444ff255a23bad00dcb90e91413ac7b84
 }
