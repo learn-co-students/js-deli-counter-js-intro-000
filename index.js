@@ -1,77 +1,79 @@
-// a) Build a function that a new customer will use when entering the deli.
-//
-// -> The function, `takeANumber`, should accept two parameters: the current line
-// of people, along with the new person's name.
-//
-// -> The function should return a welcome message including the new person's
-// position in line, such as `"Welcome, Ada. You are number 1 in line."`.
-//
-// -> And don't go being too programmer-y and give them
-// their index. These are normal people. If they are 7th in line, tell them that.
-// Don't get their hopes up by telling them they are number 6 in line.
+
+/*Deli Counter
+04/02/20
+Corey Lynch*/
+
+
+//----------------------------------------------------------------------------->
+
+//SCOPE
+
+//katzDeli = []
+// takeANumber(katzDeli, 'Ada');
+// takeANumber(katzDeli, 'Grace');
+// takeANumber(katzDeli, 'Kent');
+
+// expect(katzDeli).toEqual(["Ada", "Grace", "Kent"]);
 
 function takeANumber(line, name) {
-<<<<<<< HEAD
-
   var counter = 0;
 
+  // creates object.
+  // starts loop condition.
   line.push(name);
-
+  // updates katzDeli object outside of block.
   while (line.length > counter) {
     counter += 1;
+    // displays details and length of katzDeli object
     return `Welcome, ${name}. You are number ${line.length} in line.`
   }
 }
 
+
 //----------------------------------------------------------------------------->
 
-// a) Build a function `nowServing`.
-//
-// -> This function should accept the current line of people (`katzDeliLine`)
-//
-// -> and return the first person in line and
-//
-// -> then remove that individual from the line.
-//
-// -> If there is nobody in line, it should return
-// "There is nobody waiting to be  served!"
-//
-// i.e. nowServing(katzDeliLine); // "Currently serving Ada."
+//SCOPE
+
+// deliLine = ["Steven", "Blake", "Avi"]
+// expect(deliLine).toEqual(["Blake", "Avi"]);
 
 function nowServing(array) {
+  // setup blank array condition first.
   if (array.length < 1) {
     return "There is nobody waiting to be served!"
+
   } else {
     return `Currently serving ${array.shift()}.`;
+    // shift(); returns the shifted value!!!!!!!!
   }
 }
 
+
 //----------------------------------------------------------------------------->
 
-// c) Build a function currentLine
-//
-// -> that accepts the current line of people
-//
-// -> and returns the current line as a string;
-//
-// -> for example, if 'katzDeliLine' is currently ["Ada", "Grace"], currentLine
-// (katzDeliLine) would return "The line is currently: 1. Ada, 2. Grace".
-// You don't have to use katzDeliLine as a variable or parameter name in your
-// function though, it's just an example of a variable that might be passed to it.
-// If there is nobody in line, it should return "The line is currently empty."
+//SCOPE
+
+// expect(currentLine(["Bill", "Jane", "Ann"])).
+// toEqual("The line is currently: 1. Bill, 2. Jane, 3. Ann");});
 
 function currentLine(array) {
   var arr = [];
   var str = 'The line is currently: '
+  // setup blank array condition first.
   if (array.length < 1) {
     return "The line is currently empty.";
+
   } else {
+    // add sentence structure to each 'currentLine' array element
+    // pushes each adjusted 'currentLine' array element into blank array 'arr'
     for (let i = 0; i < array.length; i++){
       arr.push((i + 1) + '.' + ' ' + array[i]);
     }
+    // .toString() has improper delimiter.
+    // .join() takes in delimiter as argument.
     return `${str}${arr.join(', ')}`;
   }
-=======
-  return `Welcome, ${name}. You are number ${line}in line.`
->>>>>>> f97e1cc444ff255a23bad00dcb90e91413ac7b84
 }
+
+
+//----------------------------------------------------------------------------->
