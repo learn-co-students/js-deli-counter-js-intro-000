@@ -18,12 +18,12 @@ Corey Lynch*/
 function takeANumber(line, name) {
   var counter = 0;
 
-  // creates object.
+  // adds to array.
   // starts loop condition.
   line.push(name);
   // updates katzDeli object outside of block.
   while (line.length > counter) {
-    counter += 1;
+    counter += 1; //while not need
     // displays details and length of katzDeli object
     return `Welcome, ${name}. You are number ${line.length} in line.`
   }
@@ -34,21 +34,19 @@ function takeANumber(line, name) {
 
 //SCOPE
 
+// conditional ? statement if true : statement if false
 // deliLine = ["Steven", "Blake", "Avi"]
 // expect(deliLine).toEqual(["Blake", "Avi"]);
 
 function nowServing(array) {
   // setup blank array condition first.
-  if (array.length < 1) {
-    return "There is nobody waiting to be served!"
-
-  } else {
-    return `Currently serving ${array.shift()}.`;
+  return array.length < 1
+    ? "There is nobody waiting to be served!"
+    : `Currently serving ${array.shift()}.`;
     // shift(); returns the shifted value!!!!!!!!
-  }
 }
 
-
+//ternary
 //----------------------------------------------------------------------------->
 
 //SCOPE
