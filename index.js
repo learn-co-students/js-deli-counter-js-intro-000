@@ -10,7 +10,8 @@ function takeANumber(katzDeliLine, new_name) {
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length > 0) {
     return "Currently serving " + katzDeliLine.shift() + ".";
-    // takes the first element of the array and returns it with a string.
+    // removes the first element of the katzDeliLine array and returns it concatenating to a string.
+    // result - "Currently serving Name."
   } else {
     // this return happens if the line length is = 0
     return "There is nobody waiting to be served!";
@@ -31,4 +32,5 @@ function currentLine(katzDeliLine) {
   }
   return "The line is currently: " + line_str.slice(0, -2);
    // returns a string without the last space and comma
+   // result - "The line is currently: 1. Name, 2. Name" etc.
 }
