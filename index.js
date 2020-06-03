@@ -9,6 +9,7 @@ function takeANumber(katzDeliLine, new_name) {
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length >= 1) {
     return "Currently serving " + katzDeliLine.shift() + ".";
+    // takes the first element of the array and returns it with a string.
   } else {
     return "There is nobody waiting to be served!";
   }
@@ -16,14 +17,17 @@ function nowServing(katzDeliLine) {
 
 
 function currentLine(katzDeliLine) {
-  const new_line = ["The line is currently:"]
+  let line_str = ""
   if (katzDeliLine.length === 0) {
+    // checks the current length of the line
     return "The line is currently empty.";
   } else {
     for (var i = 0; i < katzDeliLine.length; i++) {
-      new_line.push(i + 1 + ". " + katzDeliLine[i] + ",");
+     line_str += i + 1 + ". " + katzDeliLine[i] + ", ";
+      // if the line is not empty.
+      // push the current index + 1 as a cust num, plus cust @ index and pushes it into new_line arr.
     }
   }
-  var line_str = new_line.join(" ")
-  return line_str.slice(0, -1)
+  return "The line is currently: " + line_str.slice(0, -2)
+   // deletes the last comma from string
 }
