@@ -27,7 +27,7 @@ function currentLine(katzDeliLine) {
   } else {
     for (let i = 0; i < katzDeliLine.length; i++) {
      line_str += i+1 + ". " + katzDeliLine[i] + ", ";
-      // if katzDeliLine is not empty adds the current index + 1 as a cust num, plus cust @ index to line_str
+      // if katzDeliLine is not empty adds the current index + 1 as a cust num, plus cust @ index to line_str on every iteration
     }
   }
   return "The line is currently: " + line_str.slice(0, -2);
