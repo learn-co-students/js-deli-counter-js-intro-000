@@ -25,7 +25,7 @@ function currentLine(katzDeliLine) {
     // checks if the line is empty
     return "The line is currently empty.";
   } else {
-    for (var i = 0; i < katzDeliLine.length; i++) {
+    for (let i = 0; i < katzDeliLine.length; i++) {
      line_str += i+1 + ". " + katzDeliLine[i] + ", ";
       // if the line is not empty adds the current index + 1 as a cust num, plus cust @ index to line_str
     }
