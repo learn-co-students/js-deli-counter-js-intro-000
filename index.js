@@ -20,7 +20,7 @@ function currentLine(line) {
   } else {
     var currentLine = "The line is currently: "
     for (let i=0; i<line.length-1; i++) {
-      currentLine+=`${i+1}. ${line[i]}, `
+      currentLine+=`${i+1}. ${line[i]}, ` //This portion adds all members of the line except the last to make the comma easier
     }
     return currentLine + `${line.length}. ${line[line.length-1]}`
   }
