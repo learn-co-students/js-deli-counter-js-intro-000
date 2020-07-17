@@ -22,6 +22,7 @@ function nowServing(line) {
 
   }
 }
+//console
 
 function  currentLine(line) {
   var returnMessage = '';
