@@ -17,17 +17,18 @@ function nowServing(lineUp) {
 }
 
 function currentLine(lineUp) {
+  
   if (lineUp.length === 0) {
     
     return "The line is currently empty."
     
   } else {
-    var str = "The line is currently: ";
+           var str = "The line is currently: ";
     
-    for (var i = 0; i < lineUp.length; i++) {
+            for (var i = 0; i < lineUp.length; i++) {
       
-      str += `${i+1}. ${lineUp[i]}${i === lineUp.length-1 ? "" : ", "}`
-    }
+                str += `${i+1}. ${lineUp[i]}${i === lineUp.length-1 ? "" : ", "}`
+                }
     return str;
   }
 }
