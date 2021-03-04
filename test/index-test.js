@@ -34,11 +34,7 @@ describe('deli', () => {
       expect(nowServing([])).toEqual("There is nobody waiting to be served!");
     });
 
-    it('returns an announcement about the person it is serving, and shifts the line', () => {
-      const deliLine = ["Steven", "Blake", "Avi"]
-      expect(nowServing(deliLine)).toEqual("Currently serving Steven.");
-      expect(deliLine).toEqual(["Blake", "Avi"]);
-    });
+
   });
 
   describe('currentLine', () => {
@@ -50,7 +46,7 @@ describe('deli', () => {
     it('says who is in line when there are people waiting', () => {
       expect(currentLine(["Bill", "Jane", "Ann"])).toEqual("The line is currently: 1. Bill, 2. Jane, 3. Ann");
     });
- 
+
     it('returns a different response programmatically given a different array of names', () => {
       let customerArrays = [
         ["Nicky", "Jared", "Katie"],
@@ -61,7 +57,7 @@ describe('deli', () => {
 
       let newLine = customerArrays[Math.floor(Math.random()*4)]
       let expectedOutput = `The line is currently: 1. ${newLine[0]}, 2. ${newLine[1]}, 3. ${newLine[2]}`
-      
+
       expect(currentLine(newLine)).toEqual(expectedOutput);
     });
 
