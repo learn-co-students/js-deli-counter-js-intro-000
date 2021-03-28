@@ -22,11 +22,11 @@ katzDeli.push(name)
 
 
 function nowServing(katzDeliLine) {
-  if (katzDeliLine.length > 0){
+  
     console.log(katzDeliLine[0])
-    return `Currently serving .`
+    //return `Currently serving .`
 
-} else {
-  return 'There is nobody waiting to be served!'
+//} else {
+//  return 'There is nobody waiting to be served!'
 }
 }
