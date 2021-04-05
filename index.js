@@ -26,14 +26,12 @@ var currentLine = line =>
     else
       {
         let i = 1;
+        announcement = `The line is currently: 1. ${line[0]}`
         do
           {
-            announcement = `The line is currently: 1. ${line[0]}`
+            announcement = announcement + `, ${i+1}. ${line[i]}`
+            i += 1;
           } while (i<line.length)
-            {
-              announcement = announcement + `, ${i+1}. ${line[i]}`
-              i += 1;
-            }
         return announcement;
       }
   }
