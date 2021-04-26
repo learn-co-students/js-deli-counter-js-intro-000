@@ -1,8 +1,18 @@
-function takeANumber(n, name) {
- var katzDeliLine = [];
-
- for (let i = 0; i < name.length; i++) {
-  katzDeliLine.push(`Welcome, ${name[i]}. You are number ${n} in line.`)
+function takeANumber(line, name) {
+ line.push(name)
+ return `Welcome, ${name}. You are number ${line.length} in line.`
 }
-return katzDeliLine
+
+function nowServing(line) {
+ if (line == 0) {
+  return "There is nobody waiting to be served!"
+}
+ return `Currently serving ${line.shift()}.`
+}
+
+function currentLine(line) {
+ if (line == 0) {
+   return "The line is currently empty."
+ }
+  return `The line is currently: 1. ${line[0]}, 2. ${line[1]}, 3. ${line[2]}`
 }
