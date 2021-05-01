@@ -20,7 +20,7 @@ function currentLine(otherDeli){
   }
   else{
     for(let i = 0; i < otherDeli.length; i++){
-      array.push(`${i+1}. ${otherDeli[i]}`);
+      array.push(`${i+1}. ${otherDeli[i]} `);
     }
   }
   return `The line is currently: ${array}`;
